@@ -17,7 +17,7 @@ var updateCheckbox = function(theme) {
 }
 
 // ------------------------
-// INITIALIZATION
+// START
 // -------------------------
 
 var start = function() {
