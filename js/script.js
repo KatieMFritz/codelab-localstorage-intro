@@ -1,8 +1,40 @@
+// -----------------------
+// UPDATERS
+// -----------------------
+
+var updateAll = function(theme) {
+  updateBody(theme)
+  updateCheckbox(theme)
+  localStorage.setItem('theme', theme)
+}
+
+var updateBody = function(theme) {
+   document.body.className = theme;
+ }
+
+var updateCheckbox = function(theme) {
+  document.getElementById('myonoffswitch').checked = theme === 'day'
+}
+
+// ------------------------
+// INITIALIZATION
+// -------------------------
+
+var start = function() {
+  var theme = localStorage.getItem('theme')
+  if (theme === null) {
+    theme = "night"
+  }
+  updateAll(theme)
+}
+
+start()
+
+// ------------------------
+// EVENTS
+// ------------------------
+
 document.getElementById('myonoffswitch').onclick = function(){
-  if ( document.body.className === 'day' ) {
-    document.body.className = 'night'
-  }
-  else {
-    document.body.className = 'day'
-  }
+  var theme = this.checked ? 'day' : 'night'
+  updateAll(theme)
 }
