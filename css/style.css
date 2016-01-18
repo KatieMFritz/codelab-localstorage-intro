@@ -36,7 +36,8 @@ SETTINGS
 .settings {
   padding: 20px;
 }
-/* @link https://proto.io/freebies/onoff/ */
+
+/* https://proto.io/freebies/onoff/ */
 .onoffswitch {
     position: relative; width: 100px;
     -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
