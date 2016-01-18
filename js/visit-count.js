@@ -23,3 +23,12 @@ var start = function() {
 }
 
 start()
+
+// --------------------------
+// EVENTS
+// --------------------------
+
+document.getElementById('reset-visit-count').onclick = function() {
+  localStorage.removeItem('visitNumber')
+  updateVisitCount(1)
+}
